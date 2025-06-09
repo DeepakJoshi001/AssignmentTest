@@ -1,6 +1,8 @@
-#project installation
+**Project Installation**
 
+https://github.com/DeepakJoshi001/AssignmentTest.git
 
+Then run npm install command.
 
 # Assignment
 
