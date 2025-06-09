@@ -1,0 +1,41 @@
+<div class="container mt-4">
+
+    <h1 class="mb-5 d-flex justify-content-center">Product Details</h1>
+    <button class="btn btn-sm btn-primary me-2" title="Add" (click)="open()">
+        Add Products
+      </button>
+    <div class="table-responsive mt-3">
+      <table class="table table-bordered table-striped table-hover align-middle">
+        <thead class="table-dark text-center">
+          <tr>
+            <th>Sr No</th> 
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+
+          <tr *ngFor="let product of products; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{product.name}} A</td>
+            <td>{{product.price}}</td>
+            <td>{{product.description}}</td>
+
+            <td class="text-center">
+              <button class="btn btn-sm btn-primary me-2" title="Update" (click)="onUpdate(product)">
+                Update
+              </button>
+              <button class="btn btn-sm btn-danger" title="Delete" (click)="deleteProduct(product._id)">
+                Delete
+              </button>
+            </td>
+          </tr>
+          <!-- Repeat rows as needed -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+
